@@ -1,18 +1,24 @@
-import React { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Form from './components/form'
 import TodoList from "./components/ToDoList";
-import { useState } from "react";
 
 function App(props) {
   const [inputText, setInputText] = useState("");
+
+  const [todos, setTodos] = useState([]);
+
   return (
-    <div>
+    <div className="App">
       <header>
-        <h1>To do</h1>
-        <Form setInputText={setInputText = { setInputText }} />
-        <TodoList />
+        <h1>My To Do</h1>
       </header>
+      <Form todo={todos} steTodos={setTodos} setInputText={setInputText} />
+      <TodoList />
+      <TodoList />
+      <TodoList />
+      <TodoList />
+      <TodoList />
     </div>
   )
 }
